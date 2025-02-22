@@ -1,0 +1,36 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    int number1,number2,number3;
+    int temp=0;
+
+    cout << "Enter numbers:";
+    cin >> number1 >> number2 >> number3;
+
+    if(number1 > number2)
+    {
+        temp = number1;
+        number1 = number2;
+        number2 = temp;
+    }
+
+    if(number1 > number3)
+    {
+        temp = number1;
+        number1 = number3;
+        number3 = temp;
+    }
+
+    if(number2 > number3)
+    {
+        temp = number2;
+        number2 = number3;
+        number3 = temp;
+    }
+
+    cout << "sorted is: " << number1 << '\t' << number2 << '\t' << number3;
+}
