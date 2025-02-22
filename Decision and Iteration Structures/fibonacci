@@ -1,0 +1,35 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    int number1=1;
+    int number2=1;
+    int number3;
+
+    cout << "Enter the number of Fibonacci terms to display:";
+    cin >> n;
+
+    if(n==0)
+        cout << "Enter a Please enter a positive integer" << endl;
+
+    else if (n==1)
+        cout << number1;
+
+    else if (n==2)
+        cout << number1 << '\t' << number2;
+
+    else {
+        cout << number1 << '\t' << number2 << '\t';
+        for (int i = 3; i <= n; ++i) {
+            number3 = number1 + number2;
+
+            number1 = number2;
+            number2 = number3;
+
+            cout << number3 << '\t';
+        }
+    }
+}
