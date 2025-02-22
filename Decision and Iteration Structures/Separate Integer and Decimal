@@ -1,0 +1,31 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float number;
+    float number2;
+    int j=0;
+    int i=0;
+
+    cout << "Enter a number:";
+    cin >> number;
+
+    int integer_number = floor(number);
+    cout << "number one is:" << integer_number;
+
+    float temp = number;
+
+    while(j!=temp)
+    {
+        temp = temp * 10;
+        number2 += (long int)(floor(temp)) * pow(10,i);
+        j = (long int)temp;
+        i++;
+    }
+
+    number2 = pow(10,i)*(number - integer_number);
+    cout << endl << "second number is:" << number2;
+}
