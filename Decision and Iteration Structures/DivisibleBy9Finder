@@ -1,0 +1,22 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    int number;
+    int sum = 0;
+    for(int i = 1000 ; i <= 1100 ; i++)
+    {
+        number = i;
+        while(number > 0)
+        {
+            sum += number % 10;
+            number /= 10;
+        }
+
+        if(sum % 9 == 0)
+            cout << i << '\t';
+    }
+}
