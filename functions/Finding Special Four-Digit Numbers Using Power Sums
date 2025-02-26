@@ -1,0 +1,34 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int pow(int , int );
+
+int main()
+{
+    int number1 , number2 , number3 , number4;
+
+    for (int i = 1000 ; i <= 9999 ; i++)
+    {
+        int temp = i;
+        number1 = temp % 10;
+        temp /= 10;
+        number2 = temp % 10;
+        temp /= 10;
+        number3 = temp % 10;
+        temp /= 10;
+        number4 = temp % 10;
+
+        if((number1 + pow(number4,4)) == (pow(number2,2) + pow(number3,3)))
+            cout << i << '\t';
+
+    }
+}
+
+int pow(int n , int x)
+{
+    if (x==0)
+        return 1;
+    else
+        return (n * pow(n , x-1));
+}
