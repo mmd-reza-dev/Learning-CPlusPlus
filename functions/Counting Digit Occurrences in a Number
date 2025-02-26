@@ -1,0 +1,32 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int function(int , int );
+
+int main()
+{
+    int number;
+    int digit;
+    cout << "Enter a number and a digit:";
+    cin >> number >> digit;
+
+    int z= function(number , digit);
+    cout << digit << " repeat " << z << " times";
+}
+
+int function(int number , int digit)
+{
+    int count=0;
+    while (number > 0)
+    {
+        int temp = number;
+        temp %= 10;
+
+        if(temp == digit)
+            ++count;
+
+        number/=10;
+    }
+    return count;
+}
