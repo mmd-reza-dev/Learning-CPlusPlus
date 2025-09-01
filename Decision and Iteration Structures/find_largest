@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number1;
+    int number2;
+    int number3;
+
+    cout << "Please enter 3 numbers:" << endl;
+    cin >> number1 >> number2 >> number3;
+
+    int max = number1;
+
+    if (max < number2)
+        max = number2;
+
+    if (max < number3)
+        max = number3;
+
+    cout <<"The maximum number is:"<< max << endl;
+    return 0;
+}
